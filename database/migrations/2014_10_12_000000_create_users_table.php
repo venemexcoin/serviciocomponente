@@ -20,6 +20,16 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+            $table->foreignId('current_team_id')->nullable();
+            $table->text('profile_photo_path')->nullable();
+            $table->double('btc', 100,8)->default(0.00000000);
+            $table->double('eth', 100,8)->default(0.00000000);
+            $table->double('vmx', 100,8)->default(0.00000000);
+            $table->float('usd')->default(0,0)->comment('Moneda principal');
+            $table->float('mxn')->default(0,0);
+            $table->float('bss')->default(0,0);
+            $table->string('avatar')->nullable();
+            $table->string('utype')->default('USR')->comment('ADM for Admin and USR for or Customer','CLB colaborador');
             $table->timestamps();
         });
     }
