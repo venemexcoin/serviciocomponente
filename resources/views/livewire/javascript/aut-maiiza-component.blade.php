@@ -321,15 +321,17 @@
            })
     </code></pre>
 
-
+    <x-botonNeon>
+        {{ route('javascript.codificar') }}
+    </x-botonNeon>
 
 
 </div>
 @push('scripts')
     <script>
-        const lista = document.getElementById('lista');
-        const preview = document.getElementById('preview');
-        const btnAceptar = document.getElementById('aceptar');
+        const lista = document.getElementById('lista'),
+            preview = document.getElementById('preview'),
+            btnAceptar = document.getElementById('aceptar');
         let elementosLista = document.querySelectorAll('#lista a');
         let postId;
 

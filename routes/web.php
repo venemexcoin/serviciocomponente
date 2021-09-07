@@ -13,6 +13,10 @@ use App\Http\Livewire\Collaborator\collaboratorDashboardComponent;
 
 use App\Http\Livewire\Admin\AdminDashboardComponent;
 
+use App\Http\Livewire\Menus\MenuJavasciptComponent;
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,6 +33,8 @@ use App\Http\Livewire\Admin\AdminDashboardComponent;
 // });
 
 Route::get('/',HomeComponent::class)->name('index');
+Route::get('menu/JavasciptComponent', MenuJavasciptComponent::class)->name('menu.javascript');
+
 
 // Sona de practica jabascript
 
@@ -56,3 +62,4 @@ Route::middleware(['auth:sanctum', 'verified','Authcollaborator'])->group(functi
 Route::middleware(['auth:sanctum', 'verified','authadmin'])->group(function() {
    Route::get('/admin/dashboard', adminDashboardComponent::class)->name('admin.dashboard'); 
 });
+
