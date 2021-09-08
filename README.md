@@ -8,3 +8,11 @@
 
 -   instalación de proyecto laravel desde 0
 -   inslalacion de livewire con composer
+
+## Como migrae una sola tabla de las migraciones
+
+-   php artisan migrate --path=database/migrations/(nombre de la tabla)
+
+## Ocultar campos desdel Models tabla
+
+-   Protected \$hidden
