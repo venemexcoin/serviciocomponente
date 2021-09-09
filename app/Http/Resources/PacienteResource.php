@@ -17,8 +17,8 @@ class PacienteResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'nombres' => Str::of($this->nombres)->upper(),
-            'apellidos' => Str::of($this->apellidos)->upper(),
+            'nombres' => Str::upper($this->nombres),  
+            'apellidos' => Str::upper($this->apellidos),
             'edad' => $this->edad,
             'sexo' => $this->sexo,
             'dni' => $this->dni,
@@ -28,6 +28,13 @@ class PacienteResource extends JsonResource
             'direccion' => $this->direccion,
             'Fecha_creado' => $this->created_at->format('d-m-Y'),
             'Fecha_modificado' => $this->updated_at->format('d-m-Y')
+        ];
+    }
+
+    public function with($request)
+    {
+        return [
+            'res' => true
         ];
     }
 }

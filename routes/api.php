@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\API\PacienteController;
+use App\Http\Controllers\API\AutenticarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,15 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResource('/tasks', TaskController::class);
 
-Route::apiResource('/pacientes',PacienteController::class);
+
+
+Route::post('registro', [AutenticarController::class, 'registro']);
+Route::post('acceso', [AutenticarController::class, 'acceso']);
+
+Route::group(['middleware' => ['auth:sanctum','authadmin']], function(){
+
+    Route::post('cerrarsesion', [AutenticarController::class, 'cerrarsesion']);
+    Route::apiResource('/pacientes',PacienteController::class);
+});
 
 

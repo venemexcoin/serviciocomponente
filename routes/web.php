@@ -12,8 +12,11 @@ use App\Http\Livewire\User\UserDashboardComponent;
 use App\Http\Livewire\Collaborator\collaboratorDashboardComponent;
 
 use App\Http\Livewire\Admin\AdminDashboardComponent;
+use App\Http\Controllers\API\PacienteController;
 
 use App\Http\Livewire\Menus\MenuJavasciptComponent;
+
+
 
 
 
@@ -43,6 +46,7 @@ Route::get('javascript/codificar', CodificarComponent::class)->name('javascript.
 Route::get('javascript/automatizacion', AutMaiizaComponent::class)->name('javascript.automatizacion');
 
 
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
@@ -61,5 +65,6 @@ Route::middleware(['auth:sanctum', 'verified','Authcollaborator'])->group(functi
 // From Admin
 Route::middleware(['auth:sanctum', 'verified','authadmin'])->group(function() {
    Route::get('/admin/dashboard', adminDashboardComponent::class)->name('admin.dashboard'); 
+   Route::apiResource('/pacientes',PacienteController::class);
 });
 

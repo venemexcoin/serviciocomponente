@@ -18,7 +18,7 @@ class PacienteController extends Controller
      */
     public function index()
     {
-        return PacienteResource::collection(Paciente::all());
+        return PacienteResource::collection(Paciente::simplePaginate(5));
     }
 
     /**
@@ -29,13 +29,14 @@ class PacienteController extends Controller
      */
     public function store(GuadarPacienteRequest $request)
     {
-        Paciente::create($request->all());
-        return response()->json([
-            'res' => true,
-            'msg' => 'Paciente Guardado Correctamente'
-        ],200);
+        
+        // return response()->json([
+        //     'res' => true,
+        //     'msg' => 'Paciente Guardado Correctamente'
+        // ],200);
 
-        return new PacienteResource(paciente::create($request->all()));
+        return (new PacienteResource(paciente::create($request->all())))
+                ->additional(['msg' => 'Paciente Guardado Correctamente']);
     }
 
     /**
@@ -46,10 +47,12 @@ class PacienteController extends Controller
      */
     public function show(Paciente $paciente)
     {
-        return response()->json([
-            'res' => true,
-            'paciente' => $paciente,
-        ],200);
+        // return response()->json([
+        //     'res' => true,
+        //     'paciente' => $paciente,
+        // ],200);
+
+        return new PacienteResource($paciente);
     }
 
     /**
@@ -61,11 +64,17 @@ class PacienteController extends Controller
      */
     public function update(ActualizarPacienteRequest $request, Paciente $paciente)
     {
+        // return response()->json([
+            //     'res' => true,
+            //     'mensaje' => 'Paciente Actualizado correctamente'
+            // ],200);
+            
         $paciente->update($request->all());
-        return response()->json([
-            'res' => true,
-            'mensaje' => 'Paciente Actualizado correctamente'
-        ],200);
+        return (new PacienteResource($paciente))
+        ->additional(['msg' => 'Paciente Actualiozado Correctamente'])
+        ->response()
+        ->setStatusCode(202);
+    
     }
 
     /**
@@ -76,10 +85,13 @@ class PacienteController extends Controller
      */
     public function destroy(Paciente $paciente)
     {
+       
+        // return response()->json([
+        //     'res' => true,
+        //     'mensaje' => 'Paciente Eliminado correctamente'
+        // ],200);
         $paciente->delete();
-        return response()->json([
-            'res' => true,
-            'mensaje' => 'Paciente Eliminado correctamente'
-        ],200);
+        return (new PacienteResource($paciente))
+        ->additional(['msg' => 'Paciente Actualiozado Correctamente']);
     }
 }
