@@ -35,3 +35,10 @@ Route::group(['middleware' => ['auth:sanctum','authadmin']], function(){
 });
 
 
+Route::post('/reset', 'ResetController@reset');
+
+Route::get('/balance', 'BalanceController@show');
+
+Route::post('/event', 'EventController@store');
+
+
