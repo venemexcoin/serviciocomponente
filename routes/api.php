@@ -5,6 +5,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\API\PacienteController;
 use App\Http\Controllers\API\AutenticarController;
+use App\Http\Controllers\BalanceController;
+use App\Http\Controllers\ResetController;
+use App\Http\Controllers\EventController;
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -35,10 +41,12 @@ Route::group(['middleware' => ['auth:sanctum','authadmin']], function(){
 });
 
 
-Route::post('/reset', 'ResetController@reset');
+Route::post('/reset', [ResetController::class, 'reset']);
+//Route::post('/reset', 'ResetController@reset');
 
-Route::get('/balance', 'BalanceController@show');
+Route::get('/balance', [BalanceController::class, 'show']);
 
-Route::post('/event', 'EventController@store');
+Route::post('/event', [EventController::class, 'store']);
+//Route::post('/event', 'EventController@store');
 
 
