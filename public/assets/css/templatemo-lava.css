@@ -1219,7 +1219,7 @@ footer .sub-footer p {
     letter-spacing: 0.5px;
 }
 
-@media (max-width: 991px) {
+@media (min-width: 991px) {
     footer .copyright {
         text-align: center;
     }
@@ -1309,5 +1309,11 @@ preloader
     }
     100% {
         opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    #full-page {
+        display: none;
     }
 }
