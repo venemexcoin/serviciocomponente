@@ -46,7 +46,7 @@
                             <h4>Zona de menu</h4>
                             <p>desplegaremos menus echos en componentes para almasenamiento</p>
                             <x-buttonMor>
-                                {{ route('javascript.automatizacion') }}
+                                {{ route('javascript.ejemplo1') }}
                             </x-buttonMor>
                             </a>
                         </div>
