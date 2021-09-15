@@ -28,6 +28,7 @@ use App\Http\Livewire\Javascript\Curso\Ejemplo8Component;
 use App\Http\Livewire\Javascript\Curso\Ejemplo9Component;
 use App\Http\Livewire\Javascript\Curso\Ejemplo10Component;
 use App\Http\Livewire\Javascript\Curso\Ejemplo11Component;
+use App\Http\Livewire\Javascript\Curso\Ejemplo12Component;
 
 
 
@@ -69,6 +70,7 @@ Route::get('javascript/ejemplo8',Ejemplo8Component::class)->name('javascript.eje
 Route::get('javascript/ejemplo9',Ejemplo9Component::class)->name('javascript.ejemplo9');
 Route::get('javascript/ejemplo10',Ejemplo10Component::class)->name('javascript.ejemplo10');
 Route::get('javascript/ejemplo11',Ejemplo11Component::class)->name('javascript.ejemplo11');
+Route::get('javascript/ejemplo12',Ejemplo12Component::class)->name('javascript.ejemplo12');
 
 
 
