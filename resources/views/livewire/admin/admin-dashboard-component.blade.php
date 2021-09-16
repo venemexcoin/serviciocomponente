@@ -9,10 +9,10 @@
                             <h2>01</h2>
                             <img src="https://i.postimg.cc/SNqbwxVq/Icon-design-amico.png" alt="">
                             <h4>Zona de menu</h4>
-                            <p>desplegaremos menus echos en componentes para almasenamiento</p>
-                            <a href="#testimonials" class="main-button">
-                                Read More
-                            </a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                            <x-bottonMor>
+
+                                <x-bottonMor>
                         </div>
                     </div>
                 </div>

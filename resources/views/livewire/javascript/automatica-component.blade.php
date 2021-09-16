@@ -182,14 +182,14 @@
     <h1>Código JavaScript Ejemplo 1</h1>
     <pre class="prettyprint linenums:1"><code class="language-javascript">
     /* Ejecutar Funciones Automáticamente (Sin botones) [JS] */
-    
-        window.onload = function Ejenplo1 () 
+
+        window.onload = function Ejenplo1 ()
         {
             /* alert('Este es el ejemplo1');*/
             /* window.print(); */
-            
+
             header('location: http://google.com'); /* devio a otra pagina */
-            
+
         }
     </code></pre>
 
@@ -199,12 +199,12 @@
     <h1>Código JavaScript Ejemplo 2</h1>
     <pre class="prettyprint linenums:1"><code class="language-javascript">
     /* Ejecutar Funciones Automáticamente (Sin botones) [JS] */
-    window.onload = function ejemplo2() 
+    window.onload = function ejemplo2()
     {
         setTimeout('accionProgramada()', hora());
     }
 
-    function hora() 
+    function hora()
     {
         horaActual = new Date();
         horaProgramada = new Date();
@@ -214,7 +214,7 @@
         return horaProgramada.getTime() - horaActual.getTime();
     }
 
-    function accionProgramada() 
+    function accionProgramada()
     {
         alert("AccionProgramada")
     }
@@ -224,7 +224,7 @@
     <pre class="prettyprint linenums:1"><code class="language-javascript">
     /* Ejecutar Funciones Automáticamente (Sin botones) [JS] */
        let funcion = "si";
-       
+
        if(funcion == "si")
        {
            alert("Este es el ejemplo numero 3");
