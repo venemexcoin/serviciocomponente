@@ -36,15 +36,23 @@
             background-color: #ddd;
         }
 
+        .mb {
+            margin-bottom: 30px;
+        }
+
     </style>
 @endpush
+<div>
+    <div class="container mb">
+        @livewire('crumbs.nav-bar-component')
+    </div>
 
-<div class="container">
-    <div class="tible">
-        <h1>Hola mundo</h1>
-        <h1>Código JavaScript Ejemplo 17</h1>
-        <div class="content">
-            <pre class="prettyprint linenums:1"><code class="language-javascript">
+    <div class="container">
+        <div class="tible">
+            <h1>Hola mundo</h1>
+            <h1>Código JavaScript Ejemplo 17</h1>
+            <div class="content">
+                <pre class="prettyprint linenums:1"><code class="language-javascript">
                 const person = {
                     name: 'Juan',
                     age: '26',
@@ -73,16 +81,16 @@
                 console.log(`Hola ${person.name}. Tienes ${person.age} años y tus hijos se llaman ${person.sons.join(', ')}`);
 
     </code></pre>
+            </div>
+
         </div>
 
-    </div>
-
-    <div class="container">
-        <div class="tible">
-            <h1>Hola mundo</h1>
-            <h1>Código JavaScript Ejemplo 18</h1>
-            <div class="content">
-                <pre class="prettyprint linenums:1"><code class="language-javascript">
+        <div class="container">
+            <div class="tible">
+                <h1>Hola mundo</h1>
+                <h1>Código JavaScript Ejemplo 18</h1>
+                <div class="content">
+                    <pre class="prettyprint linenums:1"><code class="language-javascript">
                      function saludar() {
                      console.log("Hola");
                  }
@@ -109,16 +117,16 @@
 
                 console.log(result);
         </code></pre>
+                </div>
+
             </div>
 
-        </div>
-
-        <div class="container">
-            <div class="tible">
-                <h1>Hola mundo</h1>
-                <h1>Código JavaScript Ejemplo 19</h1>
-                <div class="content">
-                    <pre class="prettyprint linenums:1"><code class="language-javascript">
+            <div class="container">
+                <div class="tible">
+                    <h1>Hola mundo</h1>
+                    <h1>Código JavaScript Ejemplo 19</h1>
+                    <div class="content">
+                        <pre class="prettyprint linenums:1"><code class="language-javascript">
                         class Persona {
                             constructor(nombre, apellido, edad) {
                                 this.nombre = nombre
@@ -141,23 +149,23 @@
                         console.log(marta.saludar());
 
             </code></pre>
-                </div>
+                    </div>
 
-            </div>
-            <ul class="pagination">
-                <li><a href="{{ route('javascript.ejemplo4') }}">...</a></li>
-                <li><a href="{{ route('javascript.ejemplo5') }}">5</a></li>
-                <li><a class="active" href="#">6</a></li>
-                <li><a href="{{ route('javascript.ejemplo7') }}">7</a></li>
-                <li><a href="#">8</a></li>
-                <li><a href="{{ route('javascript.ejemplo9') }}">...</a></li>
-                {{-- <li><a href="#">6</a></li>
+                </div>
+                <ul class="pagination">
+                    <li><a href="{{ route('javascript.ejemplo4') }}">...</a></li>
+                    <li><a href="{{ route('javascript.ejemplo5') }}">5</a></li>
+                    <li><a class="active" href="#">6</a></li>
+                    <li><a href="{{ route('javascript.ejemplo7') }}">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="{{ route('javascript.ejemplo9') }}">...</a></li>
+                    {{-- <li><a href="#">6</a></li>
                 <li><a href="#">7</a></li>
                 <li><a href="#">»</a></li> --}}
-            </ul>
-        </div>
-        @push('scripts')
-            <script>
+                </ul>
+            </div>
+            @push('scripts')
+                <script>
 
-            </script>
-        @endpush
+                </script>
+            @endpush

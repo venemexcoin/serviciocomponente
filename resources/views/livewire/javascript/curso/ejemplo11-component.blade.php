@@ -36,8 +36,16 @@
             background-color: #ddd;
         }
 
+        .mb {
+            margin-bottom: 30px;
+        }
+
     </style>
 @endpush
+<div>
+    <div class="container mb">
+        @livewire('crumbs.nav-bar-component')
+    </div>
 
 <div class="container">
     <div class="tible">
@@ -210,7 +218,7 @@
 
             </code></pre>
                 </div>
-
+                <a href="http://practicasdiarias.test/general/dynamicclock">Ejemplo</a>
             </div>
             <ul class="pagination">
                 <li><a href="{{ route('javascript.ejemplo8') }}">...</a></li>
@@ -218,7 +226,7 @@
                 <li><a href="{{ route('javascript.ejemplo10') }}">10</a></li>
                 <li><a class="active" href="#">11</a></li>
                 <li><a href="{{ route('javascript.ejemplo12') }}">...</a></li>
-                {{--<li><a href="#">6</a></li>
+                {{-- <li><a href="#">6</a></li>
                 <li><a href="">12</a></li>
                 <li><a href="#">7</a></li>
                 <li><a href="#">»</a></li> --}}

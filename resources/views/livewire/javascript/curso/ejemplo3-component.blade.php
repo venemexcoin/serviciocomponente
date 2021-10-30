@@ -36,15 +36,23 @@
             background-color: #ddd;
         }
 
+        .mb {
+            margin-bottom: 30px;
+        }
+
     </style>
 @endpush
+<div>
+    <div class="container mb">
+        @livewire('crumbs.nav-bar-component')
+    </div>
 
-<div class="container">
-    <div class="tible">
-        <h1>Hola mundo</h1>
-        <h1>Código JavaScript Ejemplo 7</h1>
-        <div class="content">
-            <pre class="prettyprint linenums:1"><code class="language-javascript">
+    <div class="container">
+        <div class="tible">
+            <h1>Hola mundo</h1>
+            <h1>Código JavaScript Ejemplo 7</h1>
+            <div class="content">
+                <pre class="prettyprint linenums:1"><code class="language-javascript">
 
             Sintaxiis simple:
             switch(evaluación){
@@ -100,8 +108,9 @@
 
             Sintaxis multiple encadenada
     </code></pre>
-        </div>
+            </div>
 
+        </div>
     </div>
 
     <div class="container">
@@ -126,13 +135,14 @@
             </div>
 
         </div>
+    </div>
 
-        <div class="container">
-            <div class="tible">
-                <h1>Hola mundo</h1>
-                <h1>Código JavaScript Ejemplo 10</h1>
-                <div class="content">
-                    <pre class="prettyprint linenums:1"><code class="language-javascript">
+    <div class="container">
+        <div class="tible">
+            <h1>Hola mundo</h1>
+            <h1>Código JavaScript Ejemplo 10</h1>
+            <div class="content">
+                <pre class="prettyprint linenums:1"><code class="language-javascript">
                         let numeros = [1, 2, 3, 4, 5];
 
                 let palabras = ['Hola', 'estamos', 'en', 'youtube'];
@@ -152,31 +162,33 @@
                 console.log(`la palabra "${palabras[3]}" tiene ${palabras[3].length} letras`);
 
             </code></pre>
-                </div>
-
             </div>
-            <ul class="pagination">
-                <li><a href="{{ route('javascript.ejemplo1') }}">...</a></li>
-                <li><a href="{{ route('javascript.ejemplo1') }}">1</a></li>
-                <li><a href="{{ route('javascript.ejemplo2') }}">2</a></li>
-                <li><a class="active" href="#">3</a></li>
-                <li><a href="{{ route('javascript.ejemplo4') }}">4</a></li>
-                <li><a href="{{ route('javascript.ejemplo5') }}">..</a></li>
-                {{-- <li><a href="#">6</a></li>
+        </div>
+    </div>
+    <ul class="pagination">
+        <li><a href="{{ route('javascript.ejemplo1') }}">...</a></li>
+        <li><a href="{{ route('javascript.ejemplo1') }}">1</a></li>
+        <li><a href="{{ route('javascript.ejemplo2') }}">2</a></li>
+        <li><a class="active" href="#">3</a></li>
+        <li><a href="{{ route('javascript.ejemplo4') }}">4</a></li>
+        <li><a href="{{ route('javascript.ejemplo5') }}">..</a></li>
+        {{-- <li><a href="#">6</a></li>
                 <li><a href="#">7</a></li>
                 <li><a href="#">»</a></li> --}}
-            </ul>
-        </div>
-        @push('scripts')
-            <script>
-                let base = 5;
+    </ul>
+</div>
 
-                let palabra = 'Hola Mundo';
-                let respuesta = true;
-                const PI = 3.14;
 
-                numero = 54;
+@push('scripts')
+    <script>
+        let base = 5;
 
-                PI = 3.1416 error de constante no se puede modificar
-            </script>
-        @endpush
+        let palabra = 'Hola Mundo';
+        let respuesta = true;
+        const PI = 3.14;
+
+        numero = 54;
+
+        PI = 3.1416 error de constante no se puede modificar
+    </script>
+@endpush

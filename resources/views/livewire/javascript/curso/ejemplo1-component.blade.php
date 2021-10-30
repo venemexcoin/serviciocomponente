@@ -36,15 +36,22 @@
             background-color: #ddd;
         }
 
+        .mb {
+            margin-bottom: 30px;
+        }
+
     </style>
 @endpush
-
-<div class="container">
-    <div class="tible">
-        <h1>Hola mundo</h1>
-        <h1>Código JavaScript Ejemplo 1</h1>
-        <div class="content">
-            <pre class="prettyprint linenums:1"><code class="language-javascript">
+<div>
+    <div class="container mb">
+        @livewire('crumbs.nav-bar-component')
+    </div>
+    <div class="container">
+        <div class="tible">
+            <h1>Variables</h1>
+            <h1>Código JavaScript Ejemplo 1</h1>
+            <div class="content">
+                <pre class="prettyprint linenums:1"><code class="language-javascript">
     /* Ejecutar Funciones Automáticamente (Sin botones) [JS] */
 
     let numero = 5;
@@ -63,16 +70,16 @@
 
         // PI = 3.1416 error de constante  no se puede modificar
     </code></pre>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="container">
-    <div class="tible">
-        <h1>Hola mundo</h1>
-        <h1>Código JavaScript Ejemplo 2</h1>
-        <div class="content">
-            <pre class="prettyprint linenums:1"><code class="language-javascript">
+    <div class="container">
+        <div class="tible">
+            <h1>Operadores</h1>
+            <h1>Código JavaScript Ejemplo 2</h1>
+            <div class="content">
+                <pre class="prettyprint linenums:1"><code class="language-javascript">
                 let a = 5;
                 let b = 2;
                 let usuario = 'Eduardo';
@@ -113,16 +120,16 @@
                 a %= 3;
                 console.log(a);
     </code></pre>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="container">
-    <div class="tible">
-        <h1>Hola mundo</h1>
-        <h1>Código JavaScript Ejemplo 3</h1>
-        <div class="content">
-            <pre class="prettyprint linenums:1"><code class="language-javascript">
+    <div class="container">
+        <div class="tible">
+            <h1>Hola mundo</h1>
+            <h1>Código JavaScript Ejemplo 3</h1>
+            <div class="content">
+                <pre class="prettyprint linenums:1"><code class="language-javascript">
                 let cadena = "Hola Mundo"
                 PROPIEDADES
                 length  -> Devuelve la logitud de la cadena
@@ -238,21 +245,22 @@
 
                 console.log(`Hola ${nombre} ${apellido}. el año que viene tendras  ${edad+1} años. `);
     </code></pre>
+            </div>
         </div>
-    </div>
 
 
-    <ul class="pagination">
+        <ul class="pagination">
 
-        <li><a class="active" href="#">1</a></li>
-        <li><a href="{{ route('javascript.ejemplo2') }}">2</a></li>
-        <li><a href="{{ route('javascript.ejemplo3') }}">3</a></li>
-        <li><a href="{{ route('javascript.ejemplo4') }}">4</a></li>
-        <li><a href="{{ route('javascript.ejemplo5') }}">...</a></li>
-        {{-- <li><a href="#">6</a></li>
+            <li><a class="active" href="#">1</a></li>
+            <li><a href="{{ route('javascript.ejemplo2') }}">2</a></li>
+            <li><a href="{{ route('javascript.ejemplo3') }}">3</a></li>
+            <li><a href="{{ route('javascript.ejemplo4') }}">4</a></li>
+            <li><a href="{{ route('javascript.ejemplo5') }}">...</a></li>
+            {{-- <li><a href="#">6</a></li>
         <li><a href="#">7</a></li>
         <li><a href="#">»</a></li> --}}
-    </ul>
+        </ul>
+    </div>
 </div>
 @push('scripts')
     <script>

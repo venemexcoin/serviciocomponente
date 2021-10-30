@@ -1,5 +1,5 @@
 @push('title_base')
-    Pactica 1
+    Pactica 2
 @endpush
 
 @push('styles')
@@ -36,15 +36,23 @@
             background-color: #ddd;
         }
 
+        .mb {
+            margin-bottom: 30px;
+        }
+
     </style>
 @endpush
+<div>
+    <div class="container mb">
+        @livewire('crumbs.nav-bar-component')
+    </div>
 
-<div class="container">
-    <div class="tible">
-        <h1>Hola mundo</h1>
-        <h1>Código JavaScript Ejemplo 4</h1>
-        <div class="content">
-            <pre class="prettyprint linenums:1"><code class="language-javascript">
+    <div class="container">
+        <div class="tible">
+            <h1>Hola mundo</h1>
+            <h1>Código JavaScript Ejemplo 4</h1>
+            <div class="content">
+                <pre class="prettyprint linenums:1"><code class="language-javascript">
                 Objeto Math
 
                 Objeto estático
@@ -98,8 +106,9 @@
 
                 console.log(Math.sqrt(2));
     </code></pre>
-        </div>
+            </div>
 
+        </div>
     </div>
 
     <div class="container">
@@ -198,13 +207,13 @@
             </div>
 
         </div>
-
-        <div class="container">
-            <div class="tible">
-                <h1>Hola mundo</h1>
-                <h1>Código JavaScript Ejemplo 6</h1>
-                <div class="content">
-                    <pre class="prettyprint linenums:1"><code class="language-javascript">
+    </div>
+    <div class="container">
+        <div class="tible">
+            <h1>Hola mundo</h1>
+            <h1>Código JavaScript Ejemplo 6</h1>
+            <div class="content">
+                <pre class="prettyprint linenums:1"><code class="language-javascript">
 
                         Ordenar 3 números de mayor a menor
                         Permuta con 3 elementos
@@ -254,31 +263,32 @@
                             }
                         }
             </code></pre>
-                </div>
-
             </div>
-            <ul class="pagination">
-                <li><a href="{{ route('javascript.ejemplo1') }}">...</a></li>
-                <li><a href="{{ route('javascript.ejemplo1') }}">1</a></li>
-                <li><a class="active" href="#">2</a></li>
-                <li><a href="{{ route('javascript.ejemplo3') }}">3</a></li>
-                <li><a href="{{ route('javascript.ejemplo4') }}">4</a></li>
-                <li><a href="{{ route('javascript.ejemplo5') }}">...</a></li>
-                {{-- <li><a href="#">6</a></li>
+
+        </div>
+        <ul class="pagination">
+            <li><a href="{{ route('javascript.ejemplo1') }}">...</a></li>
+            <li><a href="{{ route('javascript.ejemplo1') }}">1</a></li>
+            <li><a class="active" href="#">2</a></li>
+            <li><a href="{{ route('javascript.ejemplo3') }}">3</a></li>
+            <li><a href="{{ route('javascript.ejemplo4') }}">4</a></li>
+            <li><a href="{{ route('javascript.ejemplo5') }}">...</a></li>
+            {{-- <li><a href="#">6</a></li>
                 <li><a href="#">7</a></li>
                 <li><a href="#">»</a></li> --}}
-            </ul>
-        </div>
-        @push('scripts')
-            <script>
-                let base = 5;
+        </ul>
+    </div>
+</div>
+@push('scripts')
+    <script>
+        let base = 5;
 
-                let palabra = 'Hola Mundo';
-                let respuesta = true;
-                const PI = 3.14;
+        let palabra = 'Hola Mundo';
+        let respuesta = true;
+        const PI = 3.14;
 
-                numero = 54;
+        numero = 54;
 
-                //PI = 3.1416 //error de constante no se puede modificar
-            </script>
-        @endpush
+        //PI = 3.1416 //error de constante no se puede modificar
+    </script>
+@endpush

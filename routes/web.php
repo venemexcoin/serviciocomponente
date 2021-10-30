@@ -29,8 +29,19 @@ use App\Http\Livewire\Javascript\Curso\Ejemplo9Component;
 use App\Http\Livewire\Javascript\Curso\Ejemplo10Component;
 use App\Http\Livewire\Javascript\Curso\Ejemplo11Component;
 use App\Http\Livewire\Javascript\Curso\Ejemplo12Component;
+use App\Http\Livewire\Javascript\Curso\Ejemplo13Component;
+use App\Http\Livewire\Javascript\Curso\Ejemplo14Component;
+use App\Http\Livewire\Javascript\Curso\Ejemplo15Component;
 
+// Pruebas tecnicas
+use App\Http\Livewire\Javascript\PuebasTecnicas\Ejecicio1000Component;
+use App\Http\Livewire\Javascript\PuebasTecnicas\Ejecicio1001Component;
 
+//Cuestionarios de Javascript
+use App\Http\Livewire\Javascript\Question\Question1Component;
+
+//ejemplos con HTML
+use App\Http\Livewire\Javascript\PuebasEjecucion\Ejecicio1002Component;
 
 
 /*
@@ -71,7 +82,16 @@ Route::get('javascript/ejemplo9',Ejemplo9Component::class)->name('javascript.eje
 Route::get('javascript/ejemplo10',Ejemplo10Component::class)->name('javascript.ejemplo10');
 Route::get('javascript/ejemplo11',Ejemplo11Component::class)->name('javascript.ejemplo11');
 Route::get('javascript/ejemplo12',Ejemplo12Component::class)->name('javascript.ejemplo12');
+Route::get('javascript/ejemplo13',Ejemplo13Component::class)->name('javascript.ejemplo13');
+Route::get('javascript/ejemplo14',Ejemplo14Component::class)->name('javascript.ejemplo14');
+Route::get('javascript/ejemplo15',Ejemplo15Component::class)->name('javascript.ejemplo15');
 
+Route::get('javascript/ejercicio1',Ejecicio1000Component::class)->name('javascript.ejercicio1');
+Route::get('javascript/ejercicio2',Ejecicio1001Component::class)->name('javascript.ejercicio2');
+
+Route::get('javascript/ejercicio1002',Ejecicio1002Component::class)->name('javascript.ejercicio1002');
+
+Route::get('javascript/question1',Question1Component::class)->name('javascript.question1');
 
 
 

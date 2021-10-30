@@ -36,15 +36,23 @@
             background-color: #ddd;
         }
 
+        .mb {
+            margin-bottom: 30px;
+        }
+
     </style>
 @endpush
+<div>
+    <div class="container mb">
+        @livewire('crumbs.nav-bar-component')
+    </div>
 
-<div class="container">
-    <div class="tible">
-        <h1>Hola mundo</h1>
-        <h1>Código JavaScript Ejemplo 11</h1>
-        <div class="content">
-            <pre class="prettyprint linenums:1"><code class="language-javascript">
+    <div class="container">
+        <div class="tible">
+            <h1>Hola mundo</h1>
+            <h1>Código JavaScript Ejemplo 11</h1>
+            <div class="content">
+                <pre class="prettyprint linenums:1"><code class="language-javascript">
 
                 let numbers = [1, 2, 3, 4, 5];
 
@@ -162,16 +170,16 @@
             console.log(numbers);
             console.log(newNumbers);
     </code></pre>
+            </div>
+
         </div>
 
-    </div>
-
-    <div class="container">
-        <div class="tible">
-            <h1>Hola mundo</h1>
-            <h1>Código JavaScript Ejemplo 12</h1>
-            <div class="content">
-                <pre class="prettyprint linenums:1"><code class="language-javascript">
+        <div class="container">
+            <div class="tible">
+                <h1>Hola mundo</h1>
+                <h1>Código JavaScript Ejemplo 12</h1>
+                <div class="content">
+                    <pre class="prettyprint linenums:1"><code class="language-javascript">
                     let pass = '';
 
                 while (pass != 'hola') {
@@ -184,16 +192,16 @@
                     pass = prompt(`Introdusca su contraseña`)
                 } while (pass != 'hola');
         </code></pre>
+                </div>
+
             </div>
 
-        </div>
-
-        <div class="container">
-            <div class="tible">
-                <h1>Hola mundo</h1>
-                <h1>Código JavaScript Ejemplo 13</h1>
-                <div class="content">
-                    <pre class="prettyprint linenums:1"><code class="language-javascript">
+            <div class="container">
+                <div class="tible">
+                    <h1>Hola mundo</h1>
+                    <h1>Código JavaScript Ejemplo 13</h1>
+                    <div class="content">
+                        <pre class="prettyprint linenums:1"><code class="language-javascript">
              for (let i = 0; i <= 10; i++) {
                      console.log(i);
                  }
@@ -220,31 +228,31 @@
                                 console.log(`i vale ${i} y el valor de esa posicion en el array es ${numbers[i]}`);
 
             </code></pre>
-                </div>
+                    </div>
 
-            </div>
-            <ul class="pagination">
-                <li><a href="{{ route('javascript.ejemplo1') }}">...</a></li>
-                <li><a href="{{ route('javascript.ejemplo1') }}">1</a></li>
-                <li><a href="{{ route('javascript.ejemplo2') }}">2</a></li>
-                <li><a href="{{ route('javascript.ejemplo3') }}">3</a></li>
-                <li><a class="active" href="#">4</a></li>
-                <li><a href="{{ route('javascript.ejemplo5') }}">...</a></li>
-                {{-- <li><a href="#">6</a></li>
+                </div>
+                <ul class="pagination">
+                    <li><a href="{{ route('javascript.ejemplo1') }}">...</a></li>
+                    <li><a href="{{ route('javascript.ejemplo1') }}">1</a></li>
+                    <li><a href="{{ route('javascript.ejemplo2') }}">2</a></li>
+                    <li><a href="{{ route('javascript.ejemplo3') }}">3</a></li>
+                    <li><a class="active" href="#">4</a></li>
+                    <li><a href="{{ route('javascript.ejemplo5') }}">...</a></li>
+                    {{-- <li><a href="#">6</a></li>
                 <li><a href="#">7</a></li>
                 <li><a href="#">»</a></li> --}}
-            </ul>
-        </div>
-        @push('scripts')
-            <script>
-                let base = 5;
+                </ul>
+            </div>
+            @push('scripts')
+                <script>
+                    let base = 5;
 
-                let palabra = 'Hola Mundo';
-                let respuesta = true;
-                const PI = 3.14;
+                    let palabra = 'Hola Mundo';
+                    let respuesta = true;
+                    const PI = 3.14;
 
-                numero = 54;
+                    numero = 54;
 
-                PI = 3.1416 error de constante no se puede modificar
-            </script>
-        @endpush
+                    PI = 3.1416 error de constante no se puede modificar
+                </script>
+            @endpush
