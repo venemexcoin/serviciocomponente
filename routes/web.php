@@ -43,6 +43,10 @@ use App\Http\Livewire\Javascript\Question\Question1Component;
 //ejemplos con HTML
 use App\Http\Livewire\Javascript\PuebasEjecucion\Ejecicio1002Component;
 
+//pagina de practicas de youtube
+use App\Http\Livewire\Ejercicio\HomePacticaComponent;
+use App\Http\Livewire\Ejercicio\Practica\MenuPegajosoComponent;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -92,6 +96,9 @@ Route::get('javascript/ejercicio2',Ejecicio1001Component::class)->name('javascri
 Route::get('javascript/ejercicio1002',Ejecicio1002Component::class)->name('javascript.ejercicio1002');
 
 Route::get('javascript/question1',Question1Component::class)->name('javascript.question1');
+
+Route::get('ejercicio/home/practica',HomePacticaComponent::class)->name('ejercicio.homePractica');
+Route::get('ejercicio/menu/practica',MenuPegajosoComponent::class)->name('ejercicio.menuPractica');
 
 
 
