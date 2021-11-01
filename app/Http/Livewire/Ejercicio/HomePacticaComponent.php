@@ -8,6 +8,6 @@ class HomePacticaComponent extends Component
 {
     public function render()
     {
-        return view('livewire.ejercicio.home-pactica-component');
+        return view('livewire.ejercicio.home-pactica-component')->layout('layouts.basejs');
     }
 }

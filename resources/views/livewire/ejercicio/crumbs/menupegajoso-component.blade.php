@@ -1,8 +1,4 @@
-@push('title_base')
-    Menu Pegajoso
-@endpush
-
-@push('styles')
+<div>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
@@ -136,8 +132,7 @@
         }
 
     </style>
-@endpush
-<div>
+
     <div class="hero" id="hero">
         <h1>MENÚ SLIDER</h1>
         <p>HTML • CSS • Javascript</p>
@@ -148,7 +143,7 @@
         <a href="#2">Sección 2</a>
         <a href="#3">Sección 3</a>
         <a href="#4">Sección 4</a>
-        <a href="{{ route('ejercicio.homePractica') }}">Home</a>
+        <a href="#5">Sección 5</a>
         <span class="indicador" id="indicador"></span>
     </nav>
 
@@ -156,8 +151,10 @@
         <div class="seccion" id="1">
             <div class="card">
                 <h1>Sección 1</h1>
+                <ul>
+                    <li><a href="{{ route('ejercicio.menuPractica') }}">Menú navegación Pegajoso Y animado</a></li>
+                </ul>
 
-                @livewire('ejercicio.crumbs.menupegajoso-info-component')
 
             </div>
         </div>
@@ -167,7 +164,7 @@
         <div class="card">
             <h1>Sección 2</h1>
 
-            @livewire('ejercicio.crumbs.menupegajoso-html-component')
+
 
         </div>
     </div>
@@ -176,7 +173,7 @@
         <div class="card">
             <h1>Sección 3</h1>
 
-            @livewire('ejercicio.crumbs.menupegajosocss-component')
+
 
         </div>
     </div>
@@ -186,65 +183,65 @@
             <h1>Sección 4</h1>
 
 
-            @livewire('ejercicio.crumbs.menupegajosojs-component')
+
 
         </div>
     </div>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+</div>
 
+<div class="seccion" id="5">
+    <div class="card">
+        <h1>Sección 5</h1>
 
-@push('scripts')
-    <script>
-        const menu = document.getElementById('menu');
-        const indicador = document.getElementById('indicador');
-        const secciones = document.querySelectorAll('.seccion');
+    </div>
+</div>
 
-        let tamañoIndicador = menu.querySelector('a').offsetWidth;
-        indicador.style.width = tamañoIndicador + 'px';
+<script>
+    const menu = document.getElementById('menu');
+    const indicador = document.getElementById('indicador');
+    const secciones = document.querySelectorAll('.seccion');
 
-        let indexSeccionActiva;
+    let tamañoIndicador = menu.querySelector('a').offsetWidth;
+    indicador.style.width = tamañoIndicador + 'px';
 
-        // Observer
-        const observer = new IntersectionObserver((entradas, observer) => {
-            entradas.forEach(entrada => {
-                if (entrada.isIntersecting) {
-                    // Obtenemos cual es la seccion que esta entrando en pantalla.
-                    // console.log(`La entrada ${entrada.target.id} esta intersectando`);
+    let indexSeccionActiva;
 
-                    // Creamos un arreglo con las secciones y luego obtenemos el index del la seccion que esta en pantalla.
-                    indexSeccionActiva = [...secciones].indexOf(entrada.target);
-                    indicador.style.transform = `translateX(${tamañoIndicador * indexSeccionActiva}px)`;
-                }
-            });
-        }, {
-            rootMargin: '-80px 0px 0px 0px',
-            threshold: 0.2
+    // Observer
+    const observer = new IntersectionObserver((entradas, observer) => {
+        entradas.forEach(entrada => {
+            if (entrada.isIntersecting) {
+                // Obtenemos cual es la seccion que esta entrando en pantalla.
+                // console.log(`La entrada ${entrada.target.id} esta intersectando`);
+
+                // Creamos un arreglo con las secciones y luego obtenemos el index del la seccion que esta en pantalla.
+                indexSeccionActiva = [...secciones].indexOf(entrada.target);
+                indicador.style.transform = `translateX(${tamañoIndicador * indexSeccionActiva}px)`;
+            }
         });
+    }, {
+        rootMargin: '-80px 0px 0px 0px',
+        threshold: 0.2
+    });
 
-        // Agregamos un observador para el hero.
-        observer.observe(document.getElementById('hero'));
+    // Agregamos un observador para el hero.
+    observer.observe(document.getElementById('hero'));
 
-        // Asignamos un observador a cada una de las secciones
-        secciones.forEach(seccion => observer.observe(seccion));
+    // Asignamos un observador a cada una de las secciones
+    secciones.forEach(seccion => observer.observe(seccion));
 
-        // Evento para cuando la pantalla cambie de tamaño.
-        const onResize = () => {
-            // Calculamos el nuevo tamaño que deberia tener el indicador.
-            tamañoIndicador = menu.querySelector('a').offsetWidth;
+    // Evento para cuando la pantalla cambie de tamaño.
+    const onResize = () => {
+        // Calculamos el nuevo tamaño que deberia tener el indicador.
+        tamañoIndicador = menu.querySelector('a').offsetWidth;
 
-            // Cambiamos el tamaño del indicador.
-            indicador.style.width = `${tamañoIndicador}px`;
+        // Cambiamos el tamaño del indicador.
+        indicador.style.width = `${tamañoIndicador}px`;
 
-            // Volvemos a posicionar el indicador.
-            indicador.style.transform = `translateX(${tamañoIndicador * indexSeccionActiva}px)`;
-        }
+        // Volvemos a posicionar el indicador.
+        indicador.style.transform = `translateX(${tamañoIndicador * indexSeccionActiva}px)`;
+    }
 
-        window.addEventListener('resize', onResize);
-    </script>
-@endpush
+    window.addEventListener('resize', onResize);
+</script>
+</div>

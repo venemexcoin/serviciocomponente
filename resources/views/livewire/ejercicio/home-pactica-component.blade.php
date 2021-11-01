@@ -1,3 +1,7 @@
+@push('title_base')
+    Home Paginas Code
+@endpush
 <div>
-    {{-- In work, do what you enjoy. --}}
+    @livewire('ejercicio.crumbs.menupegajoso-component')
+
 </div>

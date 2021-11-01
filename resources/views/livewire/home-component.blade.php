@@ -67,12 +67,11 @@
                         <li data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                             <img src="https://i.postimg.cc/jddxsNDv/about-icon-01.png" alt="">
                             <div class="text">
-                                <h4>Vestibulum pulvinar rhoncus</h4>
-                                <p>Please do not redistribute this template ZIP file for a download purpose. You may <a
-                                        rel="nofollow" href="https://templatemo.com/contact"
-                                        target="_parent">contact</a>
-                                    us for
-                                    additional licensing of our template or to get a PSD file.</p>
+                                <h4>Nueva sección pacticas</h4>
+                                <p>En esta Sección abordáremos paginas Completas Con su código presionales
+                                    el link <a rel="nofollow" href="{{ route('ejercicio.homePractica') }}"
+                                        target="_parent">Comenzar</a>
+                                </p>
                             </div>
                         </li>
                         <li data-scroll-reveal="enter right move 30px over 0.6s after 0.5s">
